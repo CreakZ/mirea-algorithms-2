@@ -1,0 +1,20 @@
+BankAccount* binary_search(
+    std::vector<BankAccount>& accounts, 
+    int account_number
+) {
+    int left = 0, right = accounts.size() - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (accounts[mid].account_number == account_number) {
+            return &accounts[mid];
+        }
+        if (accounts[mid].account_number < account_number) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return nullptr; 
+}

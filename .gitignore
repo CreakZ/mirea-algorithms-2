@@ -1,2 +1,8 @@
-# project binaries
+# project binary directories and binaries
 bin/
+build
+target
+*.exe
+
+# report pdf renders
+main*.pdf

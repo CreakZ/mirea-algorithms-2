@@ -52,6 +52,13 @@ void find_prim_mst(const vector<vector<int>>& graph, int vertices) {
         }
     }
 
+    int w = 0;
+    for (int i = 0; i < key.size(); i++) {
+        w += key[i];
+    }
+
+    cout << "Общий вес: " << w << '\n';
+
     print_graph(parent, graph, vertices);
 }
 

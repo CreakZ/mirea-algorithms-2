@@ -1,0 +1,12 @@
+BankAccount* linear_search(
+    std::vector<BankAccount>& accounts, 
+    int account_number
+) {
+    for (auto &acc : accounts) {
+        if (account_number == acc.account_number) {
+            return &acc;
+        }
+    }
+
+    return nullptr;
+}
